@@ -1,7 +1,7 @@
-var tbody = document.querySelector("#desordenado table tbody");
 var Vista = function()
 {
-	Vista.prototype.mostrarDesordenado = function(myArreglo) {
+	Vista.prototype.mostrar = function(myArreglo, tabla) {
+		var tbody = document.querySelector(tabla + ' tbody');
 		tbody.innerHTML = "";
 		myArreglo.forEach(function (elemento, indice, array) {
 			var hilera = document.createElement("tr");
@@ -42,6 +42,6 @@ var Vista = function()
 
 		    tbody.appendChild(hilera)
 		})
-		document.querySelector('#desordenado').style.display = "initial";
+		document.querySelector(tabla).style.display = "initial";
 	};
 }

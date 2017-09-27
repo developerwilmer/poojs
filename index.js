@@ -39,17 +39,23 @@ window.onload = function(){
 	    	var persona = new Personas();
 	    	persona.agregar(nombre, apellido, edad, profesion, ciudad, nota1, nota2);
 	    	arreglo.agregarDato(persona.getPersona());
-	    	vista.mostrarDesordenado(arreglo.getMyArreglo());
+	    	vista.mostrar(arreglo.getMyArreglo(), '#desordenado');
 
 	    	if(arreglo.contar(arreglo.getMyArreglo()) > 1){
 	    		document.querySelector('#controlOrdenar').style.display = "initial";
 	    		document.querySelector('#ordenar').addEventListener('click', function(){
-	    			var seleccionado = document.querySelector('#metodo').selectedIndex;
-	    			switch(seleccionado){
-	    				case 0 : 
-	    					alert("Selecciona un metodo de la lista");
-	    				case 1 :
-	    					arreglo.ordenarBurbuja();
+	    			var indexMetodo = document.querySelector('#metodo').selectedIndex;
+	    			if(indexMetodo == 0){
+	    				alert("Seleccione un metodo");
+	    			}else{
+	    				var indexCampo = document.querySelector('#por').selectedIndex;
+	    				if(indexCampo == 0){
+	    					alert("Selecciona un campo para ordenar");
+	    				}else{
+	    					if(indexCampo == 1){
+	    						
+	    					}
+	    				}
 	    			}
 	    		})
 	    	}
