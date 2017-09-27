@@ -1,0 +1,44 @@
+body
+{
+	background: #29B6F6;
+}
+h1
+{
+	text-align: center;
+}
+input
+{
+	margin-bottom: 10px;
+}
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th{
+	background: #2962FF;
+}
+td{
+	background: #82B1FF;
+	font-weight: bold;
+}
+th, td{
+    height: 50px;
+    text-align: center;
+}
+#campos
+{
+	border: 2px solid #FF5722;
+	padding: 10px;
+}
+#controlOrdenar
+{
+	display: none;
+}
+#desordenado
+{
+	display: none;
+}
