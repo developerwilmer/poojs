@@ -48,13 +48,16 @@ window.onload = function(){
 	    			if(indexMetodo == 0){
 	    				alert("Seleccione un metodo");
 	    			}else{
-	    				var indexCampo = document.querySelector('#por').selectedIndex;
-	    				if(indexCampo == 0){
-	    					alert("Selecciona un campo para ordenar");
-	    				}else{
-	    					if(indexCampo == 1){
-	    						
-	    					}
+	    				if(indexMetodo == 1){
+	    					var indexCampo = document.querySelector('#por').selectedIndex;
+		    				if(indexCampo == 0){
+		    					alert("Selecciona un campo para ordenar");
+		    				}else{
+		    					if(indexCampo == 1){
+		    						arreglo.ordenarBurbuja('edad');
+		    						vista.mostrar(arreglo.getMyArreglo(), '#ordenado')
+		    					}
+		    				}
 	    				}
 	    			}
 	    		})
